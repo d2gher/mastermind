@@ -15,9 +15,19 @@ module Output
 
   def circle(type)
     {
-      full => "\e[37m\u25CF\e[0m",
-      empty => "\e[98m\u25CB\e[0m",
-      dotted => "\e[98m\u25CC\e[0m"
+      0 => "\e[37m\u25CF\e[0m", # Full
+      1 => "\e[98m\u25CB\e[0m", # empty
+      2 => "\e[98m\u25CC\e[0m" # Dotted
     }[type]
+  end
+
+  def print_colors(colors)
+    colors.each { |color| print "#{color_squr(color)} " }
+  end
+
+  def print_clues(clues)
+    clues = clues.sort
+    print '| Clues: '
+    clues.each { |clue| print "#{circle(clue)} " }
   end
 end
