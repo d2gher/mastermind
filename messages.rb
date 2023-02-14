@@ -35,7 +35,27 @@ Enter 2 to play as the CODE-MAKER'
     puts 'How long do you want the code to be? Enter a number between 1 and 11.'
   end
 
-  def error
-    'Please enter 4 numbers from 1 to 6'
+  def prompt_for_guess(length, max_length)
+    puts "Enter your guess. #{length} numbers between 1 and #{max_length + 1}"
+  end
+
+  def player_wins
+    sleep 1
+    puts "\n-------------------------------------------------------------------------"
+    sleep 1
+    puts "You won! Don't get to existed though, today's winner is tomorrow's loser."
+    sleep 1
+    puts "-------------------------------------------------------------------------\n"
+    sleep 1
+  end
+
+  def player_loses
+    sleep 1
+    puts "\n-------------------------------------------------"
+    sleep 1
+    puts "You lost. Don\'t worry, happens to the best of us."
+    sleep 1
+    puts "-------------------------------------------------\n"
+    sleep 1
   end
 end

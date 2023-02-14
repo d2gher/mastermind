@@ -2,10 +2,12 @@ require_relative './output'
 require_relative './messages'
 require_relative './guess'
 require_relative './string'
+require_relative './rounds'
 
 include Output
 include Message
 include Guess
+include Round
 
 welcome_message
 
@@ -29,20 +31,3 @@ loop do
   maker_game(length, max_length) if game_mode == 2
 end
 
-# tries = 13
-# while tries
-#   guess = gets.chomp
-#   guess = clean_up(guess)
-#   break if correct_guess(guess, colors)
-
-#   clues = get_clues(guess, colors)
-
-#   unless valid_guess?(guess, length, max_num)
-#     print error
-#     next
-#   end
-#   tries -= 1
-#   print_colors(guess) if valid_guess?(guess, length, max_num)
-#   print_clues(clues)
-#   puts "| Left attempts: #{tries}"
-# end

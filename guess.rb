@@ -25,7 +25,7 @@ module Guess
   end
 
   def correct_guess(guess, answer)
-    return true if answer.sort == guess.sort
+    return true if answer == guess
 
     false
   end
