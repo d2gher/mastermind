@@ -39,23 +39,13 @@ Enter 2 to play as the CODE-MAKER'
     puts "Enter your guess. #{length} numbers between 1 and #{max_length + 1}"
   end
 
-  def player_wins
+  def print_result(result)
     sleep 1
-    puts "\n-------------------------------------------------------------------------"
+    puts "\n#{'-' * result.length}"
     sleep 1
-    puts "You won! Don't get to existed though, today's winner is tomorrow's loser."
+    puts result
     sleep 1
-    puts "-------------------------------------------------------------------------\n"
-    sleep 1
-  end
-
-  def player_loses
-    sleep 1
-    puts "\n-------------------------------------------------"
-    sleep 1
-    puts "You lost. Don\'t worry, happens to the best of us."
-    sleep 1
-    puts "-------------------------------------------------\n"
+    puts "#{'-' * result.length} "
     sleep 1
   end
 end

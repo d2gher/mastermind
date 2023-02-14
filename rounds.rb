@@ -22,12 +22,12 @@ module Round
       puts "| Left attempts: #{tries}"
 
       if correct_guess(guess, colors)
-        player_wins
+        print_result("You won! Don't get to existed though, today's winner is tomorrow's loser.")
         break
       end
 
       if tries.zero?
-        player_loses
+        print_result("You lost. Don't worry, happens to the best of us.")
         break
       end
       tries -= 1
