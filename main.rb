@@ -29,5 +29,7 @@ loop do
 
   breaker_game(length, max_length) if game_mode == 1
   maker_game(length, max_length) if game_mode == 2
-end
 
+  play_another_round?
+  break unless %w[y yes].include?(gets.chomp.downcase)
+end

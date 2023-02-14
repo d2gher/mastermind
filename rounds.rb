@@ -25,7 +25,6 @@ module Round
         print_result("You won! Don't get to existed though, today's winner is tomorrow's loser.")
         break
       end
-
       if tries.zero?
         print_result("You lost. Don't worry, happens to the best of us.")
         break
@@ -34,20 +33,3 @@ module Round
     end
   end
 end
-
-# tries = 13
-# while tries
-#   guess = gets.chomp
-#   guess = clean_up(guess)
-#   break if correct_guess(guess, colors)
-
-#   
-
-#   unless valid_guess?(guess, length, max_num)
-#     print error
-#     next
-#   end
-#   
-  #  if valid_guess?(guess, length, max_num)
-  
-# end

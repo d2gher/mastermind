@@ -45,7 +45,11 @@ Enter 2 to play as the CODE-MAKER'
     sleep 1
     puts result
     sleep 1
-    puts "#{'-' * result.length} "
+    puts "#{'-' * result.length}\n"
     sleep 1
+  end
+
+  def play_another_round?
+    puts "\nDo you want to play another round? Enter y or yes."
   end
 end
