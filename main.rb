@@ -1,17 +1,15 @@
-require_relative './output'
+# frozen_string_literal: false
+
 require_relative './messages'
-require_relative './guess'
 require_relative './string'
 require_relative './rounds'
 
-include Output
 include Message
-include Guess
-include Round
 
 welcome_message
 
 loop do
+  include Round
   game_mode = 0
   loop do
     maker_or_breaker?
