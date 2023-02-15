@@ -74,15 +74,12 @@ module Round
         end
       end
 
-      loop do
-        guess.each.with_index do |color, index|
-          unless color == colors[index]
-            wrong_guess = guess.slice!(index..-1).shuffle
-            guess += wrong_guess
-            break
-          end
+      guess.each.with_index do |color, index|
+        unless color == colors[index]
+          wrong_guess = guess.slice!(index..-1).shuffle
+          guess += wrong_guess
+          break
         end
-        break
       end
     end
   end
