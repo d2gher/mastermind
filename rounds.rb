@@ -12,7 +12,7 @@ module Round
     colors = (1..max_length).to_a.sample(length)
     prompt_for_guess(length, max_length)
 
-    tries = 12
+    tries = 11
     loop do
       guess = clean_up(gets.chomp)
       unless valid_guess?(guess, length, max_length)
@@ -20,6 +20,7 @@ module Round
         next
       end
       clues = get_clues(guess, colors)
+      remove_a_line
       print_colors(guess)
       print_clues(clues)
       puts "| Left attempts: #{tries}"
@@ -47,7 +48,7 @@ module Round
     guess = (1..max_length).to_a.sample(length)
     possiable_colors = (1..max_length).to_a - guess
 
-    tries = 12
+    tries = 11
     loop do
       sleep 1
       clues = get_clues(guess, colors)

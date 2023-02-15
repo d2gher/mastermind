@@ -34,4 +34,8 @@ module Output
     print '| Clues: '
     clues.each { |clue| print "#{circle(clue)} " }
   end
+
+  def remove_a_line
+    print "\r\e[A\e[K"
+  end
 end
