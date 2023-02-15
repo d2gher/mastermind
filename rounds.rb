@@ -26,7 +26,7 @@ module Round
       puts "| Left attempts: #{tries}"
 
       if correct_guess(guess, colors)
-        print_result("You won! Don't get to existed though, today's winner is tomorrow's loser.")
+        print_result("You won! Don't get too excited though, today's winner is tomorrow's loser.")
         break
       end
       if tries.zero?
