@@ -23,7 +23,7 @@ loop do
   loop do
     prompt_for_length
     length = gets.chomp.to_i
-    break if length > 1 && length < 11
+    break if length.positive? && length < 8
   end
   max_length = length + 2
 

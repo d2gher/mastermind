@@ -72,7 +72,7 @@ module Round
           color
         end
       end
-      
+
       loop do
         guess.each.with_index do |color, index|
           unless color == colors[index]

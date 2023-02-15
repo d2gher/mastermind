@@ -32,11 +32,11 @@ Enter 2 to play as the CODE-MAKER'
   end
 
   def prompt_for_length
-    puts 'How long do you want the code to be? Enter a number between 1 and 11.'
+    puts 'How long do you want the code to be? Allowed up to 7'
   end
 
   def prompt_for_guess(length, max_length)
-    puts "Enter your guess. #{length} numbers between 1 and #{max_length + 1}"
+    puts "Enter your guess. #{length} numbers from 0 to #{max_length}"
   end
 
   def print_result(result)

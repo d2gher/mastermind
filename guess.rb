@@ -10,7 +10,7 @@ module Guess
 
   def valid_guess?(guess, length, max_num)
     return false unless guess.length == length
-    return false unless guess.all? { |num| (num.positive? && num <= max_num) }
+    return false unless guess.all? { |num| (num >= 0 && num <= max_num) }
 
     true
   end
