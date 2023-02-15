@@ -4,12 +4,16 @@
 module Output
   def color_squr(number)
     {
+      0 => "\e[47m  0  \e[0m",
       1 => "\e[100m  1  \e[0m",
       2 => "\e[101m  2  \e[0m",
       3 => "\e[102m  3  \e[0m",
       4 => "\e[104m  4  \e[0m",
       5 => "\e[105m  5  \e[0m",
-      6 => "\e[106m  6  \e[0m"
+      6 => "\e[106m  6  \e[0m",
+      7 => "\e[46m  7  \e[0m",
+      8 => "\e[45m  8  \e[0m",
+      9 => "\e[44m  9  \e[0m"
     }[number]
   end
 

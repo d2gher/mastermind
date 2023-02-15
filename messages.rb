@@ -52,4 +52,8 @@ Enter 2 to play as the CODE-MAKER'
   def play_another_round?
     puts "\nDo you want to play another round? Enter y or yes."
   end
+
+  def prompt_for_colors(length, max_length)
+    puts "Enter the code you want the computer to crack. It should be #{length} numbers between 0 and #{max_length + 1}"
+  end
 end

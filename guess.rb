@@ -29,4 +29,12 @@ module Guess
 
     false
   end
+
+  def valid_code(colors, length, max_length)
+    colors = colors.gsub(/\s+/, '').split('').map(&:to_i)
+    return false unless colors.length == length
+    return true if colors.all? { |color| (color.positive? && color <= max_length) }
+
+    false
+  end
 end
