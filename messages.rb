@@ -12,7 +12,7 @@ module Message
 
 The object of Mastermind is to guess a secret code consisting of a series of n
 colored pegs. Each guess results in clues narrowing down the possibilities of the code.
-The player wins when they guess the correct sequance of code in the 12 tries they have.
+The player wins when they guess the correct sequence of code in the 12 tries they have.
 
 #{'Clues:'.bold}
  _______________________________________________________
